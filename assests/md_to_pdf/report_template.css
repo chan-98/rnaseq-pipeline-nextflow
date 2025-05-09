@@ -1,0 +1,108 @@
+@page {
+    margin-top: 3cm;
+    size: A4;
+  
+    @bottom-right {
+      content: counter(page) " of " counter(pages);
+    }
+  
+    @bottom-center {
+      color: #808080;
+      content: string(heading-name) " - " string(heading-title);
+    }
+  
+    @top-right {
+      background: url(RANSeq_Analysis.png) no-repeat bottom;
+      background-size: 5cm;
+      content: "";
+      width: 5cm;
+    }
+  }
+  
+  html {
+    font-family: system-ui;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    string-set: heading-name content();
+    margin-bottom: 0;
+    margin-top: 10%;
+  }
+  
+  .job-title {
+    font-style: italic;
+    margin-top: 0;
+    string-set: heading-title content();
+  }
+  
+  h2 {
+    page-break-before: always;
+    string-set: heading content();
+  }
+  
+  h3, h4 {
+    margin-top: 1.8rem;
+  }
+  
+  h2 + h3, h3 + h4 {
+    margin-top: inherit;
+  }
+  
+  ul {
+    page-break-inside: avoid;
+  }
+ 
+  .source-code {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+  }
+ 
+  .bordered-table {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  
+  .styled-table th {
+    background-color: #3e8dbc;
+    color: white;
+    text-align: left;
+    font-size: 12px;
+    border-bottom: 1px solid black; /* Adding line at the bottom */
+  }
+  
+  .styled-table td {
+    font-size: 12px;
+  }
+  
+  .technologies {
+    font-style: italic;
+    page-break-before: avoid;
+  }
+  
+  .technologies::before {
+    content: "Technologies used: ";
+    font-weight: bold;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  
+  .blue-background {
+    background-color: #dae3f4;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black; /* 1px solid black sets a black border with a width of 1px */
+  }
+
+
+.title-row {
+    text-align: center;
+    background-color: #3e8dbc;
+    color: white;
+}

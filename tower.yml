@@ -1,0 +1,5 @@
+reports:
+  multiqc_report.html:
+    display: "MultiQC on FASTQC"
+  multiqc_rsem_report.html:
+    display: "MultiQC on STAR RSEM"
